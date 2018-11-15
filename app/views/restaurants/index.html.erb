@@ -7,5 +7,6 @@
   <p><%= restaurant.city %></p>
   <p><%= restaurant.food_type %></p>
   <p><%= "*" * restaurant.rating %></p>
-  <%= link_to "Remove restaurant", restaurant_path(restaurant), method: :delete %>
+  <p> <%= link_to "Remove restaurant", restaurant_path(restaurant), method: :delete %></p>
+  <p> <%= link_to "See the Chef", chef_restaurant_path(restaurant) %></p>
 <% end %>
