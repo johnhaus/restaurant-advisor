@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     collection do
       get "top", to: "restaurants#top"
     end
+    member do
+      get "chef", to: "restaurants#chef"
+    end
   end
 
   root to: 'restaurants#index'
