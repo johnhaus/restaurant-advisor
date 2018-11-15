@@ -2,6 +2,10 @@ class RestaurantsController < ApplicationController
 
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
+  def top
+    @top_restaurants = Restaurant.where(rating: 5)
+  end
+
   def index
     @restaurants = Restaurant.all
   end
