@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     member do
       get "chef", to: "restaurants#chef"
     end
+    resources :reviews, only: [:new, :create]
   end
 
   root to: 'restaurants#index'

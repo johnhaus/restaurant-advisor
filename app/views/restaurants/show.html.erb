@@ -3,4 +3,11 @@
 <p><%= @restaurant.food_type %></p>
 <p><%= "*" * @restaurant.rating %></p>
 
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+  <li><%= review.content %></li>
+  <% end %>
+</ul>
+
 <%= link_to "Back to all restaurants", restaurants_path %>
+<%= link_to "Add reveiw", new_restaurant_review_path(@restaurant) %>

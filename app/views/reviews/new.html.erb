@@ -1,0 +1,14 @@
+<h1 class="text-center">Post review for <%= @restaurant.name %></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.input :content, placeholder: "Great food" %>
+        <%= f.submit "Add review", class: "btn btn-primary" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
