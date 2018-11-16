@@ -1,23 +1,11 @@
 <%= simple_form_for @restaurant do |f| %>
   <%= f.error_notification %>
 
-  <% if @restaurant.errors.any? %>
-    <ul>
-      <% @restaurant.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-
   <div>
-    <%= f.label :name, "Enter a name" %>
-    <%= f.text_field :name %>
-    <%= f.label :city, "Enter a city" %>
-    <%= f.text_field :city %>
-    <%= f.label :food_type, "Enter a food type" %>
-    <%= f.text_field :food_type %>
-    <%= f.label :rating, "Enter a rating" %>
-    <%= f.text_field :rating %>
+    <%= f.input :name %>
+    <%= f.input :city %>
+    <%= f.input :food_type, label: "Type of food" %>
+    <%= f.input :rating, collection: 1..5, prompt: "Number of stars"%>
   </div>
 
   <div>

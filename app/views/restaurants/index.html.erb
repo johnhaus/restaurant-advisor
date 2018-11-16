@@ -7,6 +7,10 @@
   <p><%= restaurant.city %></p>
   <p><%= restaurant.food_type %></p>
   <p><%= "*" * restaurant.rating %></p>
-  <p> <%= link_to "Remove restaurant", restaurant_path(restaurant), method: :delete %></p>
-  <p> <%= link_to "See the Chef", chef_restaurant_path(restaurant) %></p>
+  <ul>
+    <li><%= link_to 'Show', restaurant %></li>
+    <li><%= link_to 'Edit', edit_restaurant_path(restaurant) %></li>
+    <li> <%= link_to "Remove restaurant", restaurant, method: :delete, data: {confirm: 'Are you sure?' }%></li>
+    <li> <%= link_to "See the Chef", chef_restaurant_path(restaurant) %></li>
+  </ul>
 <% end %>
