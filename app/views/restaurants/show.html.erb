@@ -2,10 +2,6 @@
   <%= @restaurant.name %> is on Restauant Advisor
 <% end %>
 
-
-
-
-
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.city %></p>
 <p><%= @restaurant.food_type %></p>
@@ -19,4 +15,3 @@
 
 <%= link_to "Back to all restaurants", restaurants_path %>
 <%= link_to "Add reveiw", new_restaurant_review_path(@restaurant) %>
-
