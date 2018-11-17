@@ -8,10 +8,10 @@
 
   <div class="small_font">
     <ul class="row top-padding">
-      <%= link_to 'Show', restaurant %>
-      <%= link_to 'Edit', edit_restaurant_path(restaurant) %>
-      <%= link_to "Remove restaurant", restaurant, method: :delete, data: {confirm: 'Are you sure?' }%>
-      <%= link_to "See the Chef", chef_restaurant_path(restaurant) %>
+      <%= link_to 'Show', restaurant, class: 'button'%>
+      <%= link_to 'Edit', edit_restaurant_path(restaurant), class: 'button' %>
+      <%= link_to "Remove restaurant", restaurant, method: :delete, data: {confirm: 'Are you sure?' }, class: 'button'%>
+      <%= link_to "See the Chef", chef_restaurant_path(restaurant), class: 'button' %>
     </ul>
   </div>
 </div>
