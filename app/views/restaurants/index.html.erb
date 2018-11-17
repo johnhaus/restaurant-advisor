@@ -1,14 +1,11 @@
 <h1>All Restaurants</h1>
 
-<% @restaurants.each do |restaurant| %>
-  <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
-  <p><%= restaurant.city %></p>
-  <p><%= restaurant.food_type %></p>
-  <p><%= "*" * restaurant.rating %></p>
-  <ul>
-    <li><%= link_to 'Show', restaurant %></li>
-    <li><%= link_to 'Edit', edit_restaurant_path(restaurant) %></li>
-    <li> <%= link_to "Remove restaurant", restaurant, method: :delete, data: {confirm: 'Are you sure?' }%></li>
-    <li> <%= link_to "See the Chef", chef_restaurant_path(restaurant) %></li>
-  </ul>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |r| %>
+    <div class="col-xs-10 col-sm-4">
+      <%= render "card", restaurant: r %>
+    </div>
+    <% end %>
+  </div>
+</div>
