@@ -1,7 +1,12 @@
-<h1 class="page-padding">Our best restaurants</h1>
-
-<ul>
-  <% @top_restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %> (<%= "*" * restaurant.rating %>)</li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-3">
+      <h1 class="page-padding">Our best restaurants</h1>
+      <ul>
+        <% @top_restaurants.each do |restaurant| %>
+          <li><%= restaurant.name %> (<%= "*" * restaurant.rating %>)</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
