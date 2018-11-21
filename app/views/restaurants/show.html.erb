@@ -2,7 +2,6 @@
   <%= @restaurant.name %> is on Restauant Advisor
 <% end %>
 
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-3">
@@ -17,6 +16,9 @@
         <% end %>
       </ul>
 
+      <%= link_to "Remove restaurant", @restaurant, method: :delete, data: {confirm: 'Are you sure?' }, class: 'button'%>
+      <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'button' %>
+      <%= link_to "See the Chef", chef_restaurant_path(@restaurant), class: 'button' %>
       <%= link_to "Back to all restaurants", restaurants_path %>
       <%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
     </div>
