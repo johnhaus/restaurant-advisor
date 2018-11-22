@@ -9,3 +9,7 @@ h1 {
 h2 {
   font-size: 25px;
 }
+
+.layout {
+  min-height: calc(100vh - 46px);
+}
