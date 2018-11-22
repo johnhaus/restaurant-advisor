@@ -1,6 +1,6 @@
 <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/500/300');">
   <div>
-    <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+    <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
     <p><%= restaurant.city %></p>
     <p><%= restaurant.food_type %></p>
     <p>Rating: <%= "*" * restaurant.rating %></p>
