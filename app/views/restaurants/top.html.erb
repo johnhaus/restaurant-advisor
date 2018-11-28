@@ -4,7 +4,12 @@
       <h1 class="page-padding">Our best restaurants</h1>
       <ul>
         <% @top_restaurants.each do |restaurant| %>
-          <li><%= restaurant.name %> (<%= "*" * restaurant.rating %>)</li>
+          <li>
+            <p><%= restaurant.name %> (<%= "*" * restaurant.rating %>)</p>
+            <p><%= restaurant.city %></p>
+            <p><%= restaurant.food_type %></p>
+            <p><%= link_to 'More Info', restaurant_path(restaurant), class: 'button' %></p>
+          </li>
         <% end %>
       </ul>
     </div>
