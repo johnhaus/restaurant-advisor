@@ -6,9 +6,9 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-3">
       <h1 class="page-padding"><%= @restaurant.name %></h1>
-      <p><%= @restaurant.city %></p>
-      <p><%= @restaurant.food_type %></p>
-      <p><%= "*" * @restaurant.rating %></p>
+      <p>City: <%= @restaurant.city %></p>
+      <p>Food Type: <%= @restaurant.food_type %></p>
+      <p>Rating: <%= "*" * @restaurant.rating %></p>
 
       <ul>
         <% @restaurant.reviews.each do |review| %>

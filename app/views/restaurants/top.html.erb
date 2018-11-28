@@ -6,8 +6,8 @@
         <% @top_restaurants.each do |restaurant| %>
           <li>
             <p><%= restaurant.name %> (<%= "*" * restaurant.rating %>)</p>
-            <p><%= restaurant.city %></p>
-            <p><%= restaurant.food_type %></p>
+            <p>City: <%= restaurant.city %></p>
+            <p>Food Type: <%= restaurant.food_type %></p>
             <p><%= link_to 'More Info', restaurant_path(restaurant), class: 'button' %></p>
           </li>
         <% end %>
