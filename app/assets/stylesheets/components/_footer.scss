@@ -3,3 +3,9 @@
   background-color: rgba(33,33,33,0.8);
   padding: 10px;
 }
+.footer a {
+  color: #ffffff;
+  &:hover {
+    color: #aaaaaa;
+  }
+}

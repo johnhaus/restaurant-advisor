@@ -125,10 +125,14 @@
   float: left;
   margin: 26px 0 0;
 }
-.st-navbar-desktop-logo-link > img {
-  width: 112px;
-  height: 28px;
+.home-logo {
+  color: #ffffff;
+  &:hover {
+    color: #aaaaaa;
+    text-decoration: none;
+  }
 }
+
 
 
 /* Navbar desktop menu
