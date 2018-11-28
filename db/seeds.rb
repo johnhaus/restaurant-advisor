@@ -7,8 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Restaurant.destroy_all
 
-Restaurant.create(name: "Pizza Place", city: "London", food_type: "Italian", rating: 4, chef: "Steve")
-Restaurant.create(name: "Burger Shack", city: "New York", food_type: "Fast food", rating: 2, chef: "Ted")
-Restaurant.create(name: "The Wok", city: "Paris", food_type: "Chinese", rating: 5, chef: "Sarah")
-Restaurant.create(name: "Happy Cow", city: "Tokyo", food_type: "Ice Cream", rating: 3, chef: "Marie")
-Restaurant.create(name: "Wake Up", city: "San Francisco", food_type: "Coffee", rating: 4, chef: "Jeff")
+require 'faker'
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
+Restaurant.create(name: Faker::Company.name, city: Faker::Address.city, food_type: Faker::Dessert.variety, rating: Faker::Number.between(1, 5), chef: Faker::FamilyGuy.character)
