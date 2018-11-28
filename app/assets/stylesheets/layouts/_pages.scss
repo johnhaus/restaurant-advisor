@@ -4,6 +4,7 @@
 
 h1 {
   font-size: 30px;
+  color: #ddc930;
 }
 
 h2 {
@@ -12,4 +13,11 @@ h2 {
 
 .layout {
   min-height: calc(100vh - 46px);
+}
+
+.link-style {
+  color: #ddc930;
+  &:hover {
+    text-decoration: none;
+  }
 }
