@@ -1,12 +1,6 @@
 <div class="container">
   <div class="row">
-    <h1 class="page-padding">All Restaurants</h1>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <h1 class="page-padding">All Restaurants</h1>
+    <h1 class="page-padding all-restaurants">All Restaurants</h1>
     <% @restaurants.each do |r| %>
     <div class="col-xs-10 col-sm-4">
       <%= render "card", restaurant: r %>
