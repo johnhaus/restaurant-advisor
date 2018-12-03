@@ -9,7 +9,7 @@
       <p class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @restaurant.picture %>);"></p>
       <p>City: <%= @restaurant.city %></p>
       <p>Food Type: <%= @restaurant.food_type %></p>
-      <p>Rating: <%= "*" * @restaurant.rating %></p>
+      <p>Rating: (<span class="star"><%= "*" * @restaurant.rating %></span>)</p>
 
       <p>Reviews:</p>
       <% if @restaurant.reviews.none? %>

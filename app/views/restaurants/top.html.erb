@@ -5,7 +5,7 @@
       <ul>
         <% @top_restaurants.each do |restaurant| %>
           <li>
-            <p><%= restaurant.name %> (<%= "*" * restaurant.rating %>)</p>
+            <p><%= restaurant.name %> (<span class="star"><%= "*" * restaurant.rating %></span>)</p>
             <p class="small-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= restaurant.picture %>);"></p>
             <p>City: <%= restaurant.city %></p>
             <p>Food Type: <%= restaurant.food_type %></p>
