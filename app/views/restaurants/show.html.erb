@@ -11,11 +11,18 @@
       <p>Food Type: <%= @restaurant.food_type %></p>
       <p>Rating: <%= "*" * @restaurant.rating %></p>
 
-      <ul>
-        <% @restaurant.reviews.each do |review| %>
-        <li><%= review.content %></li>
-        <% end %>
-      </ul>
+      <p>Reviews:</p>
+      <% if @restaurant.reviews.none? %>
+        <ul>
+          <li>Be the first to review this restaurant!</li>
+        </ul>
+      <% else %>
+        <ul>
+          <% @restaurant.reviews.each do |review| %>
+          <li><%= review.content %></li>
+          <% end %>
+        </ul>
+      <% end %>
 
       <p><%= link_to "Remove restaurant", @restaurant, method: :delete, data: {confirm: 'Are you sure?' }, class: 'button'%></p>
       <p><%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'button' %></p>
