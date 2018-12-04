@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_11_29_022051) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "city"
@@ -26,10 +29,11 @@ ActiveRecord::Schema.define(version: 2018_11_29_022051) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "content"
-    t.integer "restaurant_id"
+    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
   end
 
+  add_foreign_key "reviews", "restaurants"
 end
