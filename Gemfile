@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "jquery-rails"
 gem "faker"
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
