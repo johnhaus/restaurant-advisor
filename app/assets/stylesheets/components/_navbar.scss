@@ -228,21 +228,33 @@
 .sf-menu ul a:focus {
   color: #aaaaaa !important;
 }
+
+
+// --------------------------------------------------
+// Will likely not use the code below- to be removed after
+// being deemed safe to do so.
+
 /*** Third level a ***/
-.sf-menu ul ul a {
-  color: #cccccc;
-}
-.sf-menu ul ul a:hover,
-.sf-menu ul ul a:focus {
-  color: #aaaaaa !important;
-}
+// .sf-menu ul ul a {
+//   color: #cccccc;
+// }
+// .sf-menu ul ul a:hover,
+// .sf-menu ul ul a:focus {
+//   color: #aaaaaa !important;
+// }
+
 /*** First level li ***/
-.sf-menu > li {
-  /*background: #BDD2FF;*/
-}
-.sf-menu > li:hover > a {
-  /*color: #676767;*/
-}
+// .sf-menu > li {
+//   /*background: #BDD2FF;*/
+// }
+// .sf-menu > li:hover > a {
+//   /*color: #676767;*/
+// }
+// --------------------------------------------------
+
+
+
+// Keep this code below- it is actually used
 /*** Second level li ***/
 .sf-menu ul li {
   background: #333333;
@@ -251,27 +263,36 @@
 .sf-menu ul li.sfHover {
   background: #3e3e3e;
 }
-/*** Third level li ***/
-.sf-menu ul ul li {
-  background: #333333;
-}
-.sf-menu ul ul li:hover,
-.sf-menu ul ul li.sfHover {
-  background: #3e3e3e;
-}
+
+
+// --------------------------------------------------
+// Will likely not use the code below- to be removed after
+// being deemed safe to do so.
+// /*** Third level li ***/
+// .sf-menu ul ul li {
+//   background: #333333;
+// }
+// .sf-menu ul ul li:hover,
+// .sf-menu ul ul li.sfHover {
+//   background: #3e3e3e;
+// }
+
 /*** Levels li border top ***/
-.sf-menu ul li {
-  border-top: 1px solid #494949;
-}
-.sf-menu ul ul li {
-  border-top: 1px solid #494949;
-}
-.sf-menu ul li:first-child {
-  border-top: 0;
-}
+// .sf-menu ul li {
+//   border-top: 1px solid #494949;
+// }
+// .sf-menu ul ul li {
+//   border-top: 1px solid #494949;
+// }
+// .sf-menu ul li:first-child {
+//   border-top: 0;
+// }
+// --------------------------------------------------
 
 
-/* Navbar desktop mas ajustes
+
+// Keep this code below- it is actually used
+/* Navbar desktop adjustments
 -------------------------------------------------- */
 
 .sf-menu > li:last-child > a {
