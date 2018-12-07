@@ -1,7 +1,9 @@
 <div class="container layout">
   <div class="row">
     <h1 class="page-padding all-restaurants">All Restaurants</h1>
+    <div class="typed-padding">
     <h2 class="all-restaurants">Restaurant Advisor. <span id="banner-typed-text"></span></h2>
+    </div>
     <% @restaurants.each do |r| %>
     <div class="col-xs-10 col-sm-4">
       <%= render "card", restaurant: r %>
