@@ -5,7 +5,6 @@ class Restaurant < ApplicationRecord
   validates :city, presence: true
   validates :food_type, presence: true
   validates :rating, inclusion: { in: [1,2,3,4,5], allow_nil: false}
-  validates :photo, presence: true
 
   mount_uploader :photo, PhotoUploader
 end
