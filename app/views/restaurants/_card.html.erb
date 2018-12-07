@@ -1,4 +1,4 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= restaurant.picture %>);">
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path restaurant.photo, height: 300, width: 400, crop: :fill %>')">
   <div>
     <h2><%= link_to restaurant.name, restaurant_path(restaurant), class:"link-style" %></h2>
     <p>City: <%= restaurant.city %></p>
@@ -6,3 +6,4 @@
     <p>Rating: (<span class="star"><%= "*" * restaurant.rating %></span>)</p>
   </div>
 </div>
+
