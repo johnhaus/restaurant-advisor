@@ -6,6 +6,8 @@
     <%= f.input :city %>
     <%= f.input :food_type, label: "Type of food" %>
     <%= f.input :rating, collection: 1..5, prompt: "Number of stars"%>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
   </div>
 
   <div>
