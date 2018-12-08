@@ -6,7 +6,13 @@
         <% @top_restaurants.each do |restaurant| %>
           <li>
             <p><%= restaurant.name %> (<span class="star"><%= "*" * restaurant.rating %></span>)</p>
-            <p class="small-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= restaurant.picture %>);"></p>
+            <% if restaurant.photo.present? %>
+              <div class="small-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path restaurant.photo, height: 300, width: 400, crop: :fill %>')">
+              </div>
+            <% else %>
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "nophoto.png" %>')">
+              </div>
+            <% end %>
             <p>City: <%= restaurant.city %></p>
             <p>Food Type: <%= restaurant.food_type %></p>
             <p><%= link_to 'More Info', restaurant_path(restaurant), class: 'button' %></p>
