@@ -9,8 +9,13 @@
 
       <div class="modal-body">
         <h2><%= @restaurant.chef %></h2>
-        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @restaurant.avatar %>);">
+        <% if @restaurant.photo_of_the_chef.present? %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @restaurant.photo_of_the_chef, height: 300, width: 400, crop: :fill %>')">
         </div>
+      <% else %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "nophoto.png" %>')">
+        </div>
+      <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="button" data-dismiss="modal">Close</button>
