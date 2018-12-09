@@ -7,7 +7,7 @@
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-3">
       <h1 class="page-padding"><%= @restaurant.name %></h1>
       <% if @restaurant.photo.present? %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @restaurant.photo, height: 300, width: 400, crop: :fill %>')">
+        <div class="large_card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @restaurant.photo, height: 300, width: 400, crop: :fill %>')">
         </div>
       <% else %>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path "nophoto.png" %>')">
