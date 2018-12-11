@@ -1,0 +1,11 @@
+<li><%= link_to "Top Restaurants", top_restaurants_path %></li>
+<li><%= link_to "Add a restaurant", new_restaurant_path %></li>
+<li>
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <%= t(".sign_out", default: "Log out") %>
+  <% end %>
+  <% else %>
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path %>
+  <% end %>
+</li>
