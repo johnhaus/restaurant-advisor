@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
 
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy, :chef]
+  skip_before_action :authenticate_user!, only: [:index, :show, :top]
 
   def chef
   end
