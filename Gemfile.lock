@@ -246,6 +246,7 @@ DEPENDENCIES
   binding_of_caller
   bootsnap (>= 1.1.0)
   bootstrap-sass
+  bundler (~> 2.0.0.pre.2)
   byebug
   carrierwave (~> 1.2)
   cloudinary (~> 1.9.1)
