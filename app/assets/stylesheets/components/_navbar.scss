@@ -144,58 +144,58 @@
 -------------------------------------------------- */
 
 /*** Separacion chevron del texto en primer level ***/
-.sf-arrows .sf-with-ul {
-  padding-right: 28px;
-}
-/*** Separacion chevron del texto en segundo level ***/
-.sf-arrows ul .sf-with-ul {
-  padding-right: 38px;
-}
-/*** Separacion chevron del texto en segundo level dropdown right ***/
-.sf-arrows li.dropdown-right ul .sf-with-ul {
-  padding-right: 12px;
-  padding-left: 38px;
-}
-/*** Generated arrows ***/
-.sf-arrows .sf-with-ul:after {
-  content: '\f0d7';
-  font-family: 'FontAwesome';
-  position: absolute;
-  margin-top: 1px;
-  margin-left: 5px;
-  height: 0;
-  width: 0;
-}
-.sf-arrows > li > .sf-with-ul:focus:after,
-.sf-arrows > li:hover > .sf-with-ul:after,
-.sf-arrows > .sfHover > .sf-with-ul:after {
-  content: '\f0d8';
-}
-/*** Generated second arrows ***/
-.sf-arrows ul .sf-with-ul:after {
-  content: '\f0da';
-  margin-left: 5px;
-  right: 20px;
-}
-.sf-arrows ul li > .sf-with-ul:focus:after,
-.sf-arrows ul li:hover > .sf-with-ul:after,
-.sf-arrows ul .sfHover > .sf-with-ul:after {
-  content: '\f0d7';
-  right: 23px;
-}
-/*** Generated second right arrows ***/
-.sf-arrows li.dropdown-right ul .sf-with-ul:after {
-  float: left;
-  content: '\f0d9';
-  margin-right: 30px;
-  left: 10px;
-}
-.sf-arrows li.dropdown-right ul li > .sf-with-ul:focus:after,
-.sf-arrows li.dropdown-right ul li:hover > .sf-with-ul:after,
-.sf-arrows li.dropdown-right ul .sfHover > .sf-with-ul:after {
-  content: '\f0d7';
-  left: 10px;
-}
+// .sf-arrows .sf-with-ul {
+//   padding-right: 28px;
+// }
+// /*** Separacion chevron del texto en segundo level ***/
+// .sf-arrows ul .sf-with-ul {
+//   padding-right: 38px;
+// }
+// /*** Separacion chevron del texto en segundo level dropdown right ***/
+// .sf-arrows li.dropdown-right ul .sf-with-ul {
+//   padding-right: 12px;
+//   padding-left: 38px;
+// }
+// /*** Generated arrows ***/
+// .sf-arrows .sf-with-ul:after {
+//   content: '\f0d7';
+//   font-family: 'FontAwesome';
+//   position: absolute;
+//   margin-top: 1px;
+//   margin-left: 5px;
+//   height: 0;
+//   width: 0;
+// }
+// .sf-arrows > li > .sf-with-ul:focus:after,
+// .sf-arrows > li:hover > .sf-with-ul:after,
+// .sf-arrows > .sfHover > .sf-with-ul:after {
+//   content: '\f0d8';
+// }
+// /*** Generated second arrows ***/
+// .sf-arrows ul .sf-with-ul:after {
+//   content: '\f0da';
+//   margin-left: 5px;
+//   right: 20px;
+// }
+// .sf-arrows ul li > .sf-with-ul:focus:after,
+// .sf-arrows ul li:hover > .sf-with-ul:after,
+// .sf-arrows ul .sfHover > .sf-with-ul:after {
+//   content: '\f0d7';
+//   right: 23px;
+// }
+// /*** Generated second right arrows ***/
+// .sf-arrows li.dropdown-right ul .sf-with-ul:after {
+//   float: left;
+//   content: '\f0d9';
+//   margin-right: 30px;
+//   left: 10px;
+// }
+// .sf-arrows li.dropdown-right ul li > .sf-with-ul:focus:after,
+// .sf-arrows li.dropdown-right ul li:hover > .sf-with-ul:after,
+// .sf-arrows li.dropdown-right ul .sfHover > .sf-with-ul:after {
+//   content: '\f0d7';
+//   left: 10px;
+// }
 
 
 /* Navbar desktop menu superfish last item
