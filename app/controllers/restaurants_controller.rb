@@ -7,24 +7,30 @@ class RestaurantsController < ApplicationController
   end
 
   def top
-    @top_restaurants = Restaurant.where(rating: 5)
+    @top_restaurants = policy_scope(Restaurant.where(rating: 5))
+    # @top_restaurants = Restaurant.where(rating: 5)
   end
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = policy_scope(Restaurant)
   end
 
   def show
+    @restaurants = policy_scope(Restaurant)
   end
 
   def new
     @restaurant = Restaurant.new
+    authorize @restaurant
   end
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.user = current_user
+    authorize @restaurant
+
     if @restaurant.save
-      redirect_to restaurants_path
+      redirect_to restaurants_path, notice: 'Restaurant was successfully created.'
     else
       render :new
     end
@@ -35,7 +41,7 @@ class RestaurantsController < ApplicationController
 
   def update
     if @restaurant.update(restaurant_params)
-      redirect_to restaurants_path(@restaurant)
+      redirect_to @restaurant, notice: 'Restaurant was successfully updated.'
     else
       render :edit
     end
@@ -43,17 +49,16 @@ class RestaurantsController < ApplicationController
 
   def destroy
     @restaurant.destroy
-    redirect_to root_path
+    redirect_to restaurants_url, notice: 'Restaurant was successfully destroyed.'
   end
 
   private
   def restaurant_params
-    params.require(:restaurant).permit(:name, :city, :food_type, :rating, :photo, :chef, :photo_of_the_chef)
+    params.require(:restaurant).permit(:name, :city, :food_type, :rating, :photo, :chef, :photo_of_the_chef, :photo_cache, :photo_of_the_chef_cache)
   end
 
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
+    authorize @restaurant
   end
-
-
 end
