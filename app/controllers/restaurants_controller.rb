@@ -8,7 +8,6 @@ class RestaurantsController < ApplicationController
 
   def top
     @top_restaurants = policy_scope(Restaurant.where(rating: 5))
-    # @top_restaurants = Restaurant.where(rating: 5)
   end
 
   def index
