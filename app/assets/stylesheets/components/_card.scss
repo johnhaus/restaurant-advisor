@@ -7,7 +7,6 @@
   position: relative;
   min-width: 230px;
   padding: 5px;
-  margin: 10px;
   border-radius: 3px;
   box-shadow: 3px 3px 8px rgba(33,33,33,0.8);
 }
@@ -16,4 +15,10 @@
 }
 .star {
   color: #ddc930;
+}
+.card_margin {
+  margin: 10px;
+}
+.card_bottom_margin {
+  margin-bottom: 10px;
 }
