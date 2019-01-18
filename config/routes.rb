@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     member do
       get "chef", to: "restaurants#chef"
     end
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :destroy]
   end
 
   namespace :admin do
