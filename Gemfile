@@ -37,6 +37,7 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'devise'
 gem 'pundit'
+gem 'geocoder'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
