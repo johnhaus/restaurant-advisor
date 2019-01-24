@@ -12,6 +12,14 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = policy_scope(Restaurant)
+    @restaurants = Restaurant.where.not(latitude: nil, longitude: nil)
+
+    @markers = @restaurants.map do |restaurant|
+      {
+        lng: restaurant.longitude,
+        lat: restaurant.latitude
+      }
+    end
   end
 
   def show
