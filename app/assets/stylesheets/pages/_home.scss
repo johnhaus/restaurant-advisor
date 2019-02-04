@@ -3,12 +3,29 @@
   margin-left: 20px;
 }
 
-.index-layout {
-  display: flex;
-}
-
-.background-color {
-  background-color: #e5e5e5;
-  margin-top: 80px;
+.background {
+  margin-top: 90px;
   margin-bottom: 10px;
 }
+
+@media(min-width: 720px) {
+  #map {
+  flex: 0 0 400px;
+  margin: 80px 0px 10px 10px;
+  position: sticky !important;
+  top: 80px !important;
+  }
+  .index-layout {
+  display: flex;
+  }
+}
+
+@media(max-width: 720px) {
+  #map {
+  flex: 0 0 100%;
+  padding-top: 30px;
+  margin: 10px;
+  }
+}
+
+
