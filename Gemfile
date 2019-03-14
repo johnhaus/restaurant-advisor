@@ -46,7 +46,7 @@ gem 'geocoder'
 # gem 'capistrano-rails', group: :development
 
 # Frontend gems
-gem "bootstrap-sass"
+gem "bootstrap-sass", ">= 3.4.1"
 gem "simple_form"
 gem "font-awesome-sass"
 gem "autoprefixer-rails"
