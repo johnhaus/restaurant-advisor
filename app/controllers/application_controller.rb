@@ -25,4 +25,8 @@ class ApplicationController < ActionController::Base
       error: "Sorry, you are not authorized to perform that action."
     }, status: :unauthorized
   end
+
+  def default_url_options
+  { host: ENV["HOST"] || "localhost:3000" }
+  end
 end
