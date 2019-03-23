@@ -7,10 +7,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <meta property='og:title' content='Restaurant Advisor'/>
-    <meta property='og:image' content="restaurant-advisor.png"/>
-    <meta property='og:description' content='Restaurant Advisor. All the Restaurants. All in One Place.'/>
-    <meta property='og:url' content='https://restaurant-advisor.herokuapp.com/'/>
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application' %>
