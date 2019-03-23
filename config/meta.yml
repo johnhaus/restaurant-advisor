@@ -1,4 +1,4 @@
-meta_product_name: "John Haus"
-meta_title: "John Haus - Full stack web developer"
-meta_description: "I build web applications with Ruby on Rails and React"
+meta_product_name: "Restaurant Advisor"
+meta_title: "Restaurant Advisor. All the Restaurants. All in One Place. "
+meta_description: "Find great restaurants in your area."
 meta_image: "cover.png" # should exist in `app/assets/images/`
