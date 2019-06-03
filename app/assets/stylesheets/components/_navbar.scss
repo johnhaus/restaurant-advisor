@@ -1,193 +1,70 @@
-/* Navbar desktop
--------------------------------------------------- */
-
-.st-navbar-desktop-wrapper {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  width: 100%;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0;
-  z-index: 1030;
-}
-.st-navbar-desktop-fixed {
-  position: fixed;
-  top: 0;
-}
-.st-navbar-desktop {
-  position: relative;
+/* The css under here is for the menu icon animation on click */
+.navbar {
   height: 80px;
-  z-index: auto;
+  background-color: rgba(33,33,33,0.8);
 }
-.st-navbar-desktop:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.home {
+  padding-top: 20px;
+  padding-left: 10px;
 }
-
-
-/* Navbar desktop logo
--------------------------------------------------- */
-
-.st-navbar-desktop-logo {
-  float: left;
-  margin: 26px 0 0;
+#navbar {
+  padding-top: 15px;
 }
-.home-logo {
+.navbar a {
   color: #ddc930;
   &:hover {
     color: #b7a628;
     text-decoration: none;
   }
 }
-
-
-
-/* Navbar desktop menu
--------------------------------------------------- */
-
-.st-navbar-desktop-menu {
-  float: right;
-}
-
-
-/* Navbar desktop menu superfish settings
--------------------------------------------------- */
-
-.sf-menu, .sf-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.sf-menu li {
-  position: relative;
-}
-.sf-menu ul {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;
-}
-.sf-menu > li {
-  float: left;
-}
-.sf-menu li:hover ul,
-.sf-menu li:active ul,
-.sf-menu li.sfHover > ul {
-  display: block;
-}
-.sf-menu a {
-  display: block;
-  position: relative;
-}
-.sf-menu ul ul {
-  top: 0;
-  left: 100%;
-}
-
-
-/* Navbar desktop menu superfish custom
--------------------------------------------------- */
-
-.sf-menu {
-  float: left;
-}
-.sf-menu ul {
-  min-width: 180px;
-}
-.sf-menu a {
-  padding: 28px 12px 29px 12px;
-  text-decoration: none;
-  zoom: 1;
-}
-.sf-menu li {
-  white-space: nowrap;
-  *white-space: normal;
-  -webkit-transition: background .2s;
-  transition: background .2s;
-}
-.sf-menu ul a {
-  padding: 11px 12px 12px 12px;
-  font-size: 13px;
-}
-.sf-menu li:hover,
-.sf-menu li.sfHover {
-  -webkit-transition: none;
-  transition: none;
-}
-/*** Align right ***/
-.sf-menu li.dropdown-right ul {
-  left: auto;
-  right: 0;
-  min-width: 150px;
-}
-.sf-menu li.dropdown-right a {
-  text-align: right;
-  zoom: 1;
-}
-.sf-menu li.dropdown-right ul ul {
-  right: 100%;
-}
-
-
-
-/* Navbar desktop menu superfish last item
--------------------------------------------------- */
-.sf-menu > li.no-padding-right > a {
-  padding-right: 0px;
-}
-
-
-/* Navbar desktop all styles
--------------------------------------------------- */
-
-/*** Navbar desktop ***/
-.st-navbar-desktop:before {
-  background-color: rgba(33,33,33,0.8);
-}
-/*** First level a ***/
-.sf-menu a {
+#navbar a {
   color: #ffffff;
+  &:hover {
+    color: #aaaaaa;
+    text-decoration: none;
+  }
 }
-.sf-menu a:hover,
-.sf-menu a:focus {
-  color: #aaaaaa;
+@media screen and (max-width: 767px) {
+  #navbar a {
+    background-color: rgba(33,33,33,0.8);
+  }
 }
-/*** Second level a ***/
-.sf-menu ul a {
-  color: #cccccc;
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+  padding-top: 25px;
+  padding-bottom: 24px;
 }
-.sf-menu ul a:hover,
-.sf-menu ul a:focus {
-  color: #aaaaaa !important;
+.navbar-toggle:hover {
+  background: transparent;
 }
-
-
-/*** Second level li ***/
-.sf-menu ul li {
-  background: #333333;
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
 }
-.sf-menu ul li:hover,
-.sf-menu ul li.sfHover {
-  background: #3e3e3e;
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
 }
-
-
-
-/* Navbar desktop adjustments
--------------------------------------------------- */
-
-.sf-menu > li:last-child > a {
-  padding-right: 0;
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed {
+  padding-top: 25px;
+}
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
 }

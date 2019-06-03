@@ -1,21 +1,28 @@
-<div id="st-navbar-desktop-wrapper" class="st-navbar-desktop-wrapper st-navbar-desktop-fixed">
-  <div class="st-navbar-desktop">
-    <div class="container">
-      <div class="st-navbar-desktop-logo">
-        <div title="Home"> <%= link_to "", root_path, class:"fas fa-home fa-2x home-logo"%></div>
-      </div>
-      <nav class="st-navbar-desktop-menu" role="navigation">
-        <ul id="st-navbar-desktop-menu-nav" class="sf-menu hidden-xs">
-          <%= render "shared/navlinks" %>
-        </ul>
-        <ul id="st-navbar-desktop-menu-nav" class="sf-menu hidden-sm hidden-md hidden-lg">
-          <li class="dropdown-right"><a class="fas fa-bars fa-2x"></a>
-            <ul>
-              <%= render "shared/navlinks" %>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="home"> <%= link_to "", root_path, class:"fas fa-home fa-2x home-logo"%></div>
     </div>
-  </div>
-</div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Top Restaurants", top_restaurants_path %></li>
+        <li><%= link_to "Add a restaurant", new_restaurant_path %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %>
+              <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+            </li>
+          <% else %>
+            <li><%= link_to t(".sign_in", default: "Login"), new_user_session_path %></li>
+          <% end %>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</nav>
