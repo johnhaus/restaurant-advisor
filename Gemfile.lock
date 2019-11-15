@@ -197,7 +197,7 @@ GEM
     sassc (2.0.0)
       ffi (~> 1.9.6)
       rake
-    simple_form (4.1.0)
+    simple_form (5.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     spring (2.0.2)
@@ -267,7 +267,7 @@ DEPENDENCIES
   pundit
   rails (~> 5.2.1)
   sass-rails (~> 5.0)
-  simple_form
+  simple_form (>= 5.0.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
